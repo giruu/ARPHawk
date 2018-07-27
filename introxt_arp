@@ -1,0 +1,45 @@
+#!/bin/bash
+clear
+cd Logo && ./introxt_logo
+cd ..
+echo "Enter The Interface";
+read int;
+echo "Enter Your Ip Address";
+read ip;
+echo "Enter The Range From";
+echo "........:";read a ;echo ".";
+echo "....:"; read b ;echo ".";
+echo "..:"; read c ;echo ".";
+echo ".:"; read d ;echo ".";
+echo "Upto "
+echo "........:"; read a1 ;echo ".";
+echo "....:"; read b1 ;echo ".";
+echo "..:"; read c1 ;echo ".";
+echo ".:"; read d1 ;echo ".";
+echo $int > alive_host.txt;
+echo $int > arping.txt;
+i=0
+j=0
+k=0
+l=0
+m=0
+for ((i=a;i<=a1;i++))
+do 
+      for ((j=b;j<=b1;j++))
+          do  
+             for ((k=c;k<=c1;k++))
+                  do  
+                      for ((l=d;l<=d1;l++))
+                           do   
+                                arping -I wlan0 -c 4 -s $ip $i.$j.$k.$l >> arping.txt
+                                if [ $? -eq 0 ]; then
+                                    echo $i.$j.$k.$l;
+                                   arp $i.$j.$k.$l  >> alive_host.txt;
+                                 fi 
+                                  
+                           done
+                 done
+         done
+done
+cat alive_host.txt;
+echo "Thats All";
