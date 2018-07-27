@@ -31,7 +31,7 @@ do
                   do  
                       for ((l=d;l<=d1;l++))
                            do   
-                                arping -I wlan0 -c 4 -s $ip $i.$j.$k.$l >> arping.txt
+                                arping -I $int -c 4 -s $ip $i.$j.$k.$l >> arping.txt
                                 if [ $? -eq 0 ]; then
                                     echo $i.$j.$k.$l;
                                    arp $i.$j.$k.$l  >> alive_host.txt;
