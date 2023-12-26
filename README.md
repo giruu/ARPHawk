@@ -18,8 +18,12 @@ Navigate to the cloned directory:
 ```bash
 cd ARPHawk
 ```
+```bash
 Make the script executable: chmod +x ARPHawk.sh
+```
+```bash
 Run the script: ./ARPHawk.sh
+```
 Follow the prompts to enter the interface, your IP address, and the IP range.
 
 **Dependencies**
