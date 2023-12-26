@@ -1,5 +1,5 @@
 # ARPHawk
-Overview
+**Overview**
 This script expedites network discovery by leveraging ARP requests to efficiently identify active hosts across an IP range, ideal for rapid network mapping and device inventory.
 
 **Features**
