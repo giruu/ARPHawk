@@ -10,8 +10,16 @@ This script expedites network discovery by leveraging ARP requests to efficientl
 
 **Usage**
 
-Make the script executable: chmod +x arping_scanner.sh
-Run the script: ./arping_scanner.sh
+```bash
+git clone https://github.com/giruu/ARPHawk.git
+```
+Navigate to the cloned directory:
+
+```bash
+cd ARPHawk
+```
+Make the script executable: chmod +x ARPHawk.sh
+Run the script: ./ARPHawk.sh
 Follow the prompts to enter the interface, your IP address, and the IP range.
 
 **Dependencies**
